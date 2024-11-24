@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans Caption", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pacifico", cursive;
+}
+main {
+  background-color: #f7ecde;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  background-color: #fec260;
+  width: 25%;
+  height: 3vh;
+  left: 37%;
+  bottom: 0.1875rem;
+  z-index: -1;
+  display: block;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 768px) {
+  h1::before {
+    width: 42%;
+    left: 29%;
+    height: 1vh;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h1:hover::before {
+    height:4vh;
+  }
+}
+
+h1:hover::before {
+  height: 6vh;
+}
+.main-body h2 {
+  padding: 20px;
+  font-family: "Righteous", sans-serif;
+  background: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+  border-top: dotted #352e28 2px;
+  padding: 0 3rem;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.main-body .left-icon {
+  color: #3ca55c;
+}
+.main-body .right-icon {
+  color: #b5ac49;
+}
+.btn {
+  background-color: #d1512d;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.btn:hover {
+  background-color: #bb4120;
+  color: white;
+}
+.data {
+    border-top: dotted #352e28 2px;
+    padding: 0 2rem;
+}
+.btn-visit {
+  background-color: #9eb23b;
+  color: white;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.btn-visit:hover {
+  background-color: #8a9e23;
+  color: white;
+}
+.btn-delete {
+  background-color: #eb1d36;
+  color: white;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.btn-delete:hover {
+  color: white;
+  background-color: #d30820;
+}
+.alertModal {
+  top: 35%;
+  left: 30%;
+}
+@media screen and (max-width: 768px) {
+  .alertModal {
+    top: 30%;
+    left: 7%;
+  }
+}
+.alertModal h3 {
+  font-family: "Bree Serif", serif;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.closeBtn {
+  border: none;
+  background-color: transparent;
+}

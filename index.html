@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="imgs/favicon.ico" />
+    <!--links-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!--icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="pb-5 px-lg-5 px-sm-3">
+      <div class="container-full ">
+        <h1 class="text-center m-sm-auto  pt-5 display-3 position-relative z-3">
+          Bookmarker
+        </h1>
+     
+      <br />
+      <br />
+      <br />
+      <div class="main-body  m-sm-auto">
+        <h2 class="fs-4 pt-4 text-center ">
+          <svg
+            class="left-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-bookmark-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+            />
+          </svg>
+          Bookmark your favorite sites
+          <svg
+            class="right-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-bookmark-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+            />
+          </svg>
+        </h2>
+        <form id="bookmarkForm">
+          <div class="b-name">
+            <label class="fw-bold pb-2" for="bookName"
+              ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+            >
+            <input
+              
+              type="text"
+              class="form-control"
+              placeholder="Bookmark Name"
+              id="bookName"
+            />
+          </div>
+          <div class="website ">
+            <label class="fw-bold p-2" for="website"
+              ><i class="fa-solid fa-link"></i> Site URL
+            </label>
+            <input
+              
+              type="url"
+              class="form-control"
+              placeholder="Website URL"
+              id="website"
+            />
+          </div>
+          <div class="btttn text-center py-3">
+            <button
+              class="btn px-5 text-center m-auto"
+              id="btnSubmit"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <div id="alertOverlay" class="d-none overlay"></div>
+        <div id="alertModal" class="d-none alertModal z-3 p-4 container m-auto position-absolute bg-white col-lg-5 rounded-2 shadow-lg col-sm-10">
+          <div class="all-icons d-flex justify-content-between ">
+            <div class="circle-icons d-flex fs-6 my-4">
+              <i class="fa-solid fa-circle pe-2" style="color: #f15f5d"></i>
+              <i class="fa-solid fa-circle pe-2" style="color: #febe2e"></i>
+              <i class="fa-solid fa-circle" style="color: #4db748"></i>
+          </div>
+          <div class="close-icon">
+            <button  id="closeAlert" class="closeBtn text-dark py-2"><i class="fa-solid fa-x fw-bold fs-5"></i></button>
+          </div>
+          
+          </div>
+
+          <h3 class="fs-4 mb-2">
+              Site Name or URL is not valid. Please follow the rules below:
+          </h3>
+          <p class="pt-2">
+              <i class="fa-regular fa-circle-right" style="color: #bb4120"></i>
+              Site name must contain at least 3 characters. <br /> <br>
+              <i class="fa-regular fa-circle-right" style="color: #bb4120"></i>
+              Site URL must be a valid one (e.g., https://example.com).
+          </p>
+      </div>
+
+        <div class="data">
+          <div class="container mt-4 bg-white">
+            <table class="table">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Index</th>
+                  <th scope="col">Website Name</th>
+                  <th scope="col">Visit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
